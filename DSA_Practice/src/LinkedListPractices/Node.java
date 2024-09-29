@@ -3,7 +3,7 @@ package LinkedListPractices;
 public class Node {
 	
 	private int data;
-	private Node next;//the reference to the next Node in the linked list
+	Node next;//the reference to the next Node in the linked list
 	
 	
 	public int getData() {
@@ -24,6 +24,10 @@ public class Node {
 	public Node(int data, Node next) {
 		this.data = data;
 		this.next = next;
+	}
+	
+	public Node(int data) {
+		this.data = data;
 	}
 	
 	
