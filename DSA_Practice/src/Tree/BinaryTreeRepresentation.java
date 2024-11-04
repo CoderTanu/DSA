@@ -1,14 +1,4 @@
 package Tree;
-//
-//class Node {
-//	int data;
-//	Node left;
-//	Node right;
-//	
-//	Node(int data){
-//		this.data=data;
-//	}
-//}
 
 public class BinaryTreeRepresentation {
 
@@ -16,6 +6,10 @@ public class BinaryTreeRepresentation {
 		Node n1 = new Node(1);
 		n1.left = new Node(2);
 		n1.right =new Node(3);
+		
+		System.out.println(n1.data);
+		System.out.println(n1.left.data);	
+		System.out.println(n1.right.data);
 
 	}
 	
