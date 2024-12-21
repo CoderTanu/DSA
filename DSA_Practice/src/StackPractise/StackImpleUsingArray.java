@@ -1,20 +1,28 @@
 package StackPractise;
 
-import java.util.Stack;
+import java.util.Scanner;
 
 public class StackImpleUsingArray {
    
 	
 	
-	public static void main(String[] args) {
-		
-		stack stack = new stack();
+	public static void main(String[] args) throws Exception {
+		System.out.println("ENTER THE SIXE OF STACK:");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		stack stack = new stack(n);
 		stack.push(1);
+		stack.printStack();
 		stack.push(2);
+		stack.printStack();
 		stack.push(3);
+		stack.printStack();
 		stack.push(5);
+		stack.printStack();
 		stack.push(4);
+		stack.printStack();
 		stack.push(6);
+		stack.printStack();
 		
 		System.out.println(stack);
 		
@@ -36,12 +44,28 @@ public class StackImpleUsingArray {
 }
 	
 	class stack{
-		int size=10000;
-		int arr[] = new int[size];
-		int top = -1;
+//		int size=10000;
+//		int arr[] = new int[size];
+//		int top = -1;
+		
+		
+		int size;
+		int arr[];
+		int top;
+		
+		public stack(int stackSize) {
+			size = stackSize;
+			arr = new int [stackSize];
+			top = -1;
+		}
+		
+		
 		
 		//push
-		void push(int x) {
+		void push(int x) throws Exception {
+			if(top>=size-1) {
+				throw new Exception("stack is full--overflow condition");
+			}
 			top++;
 			arr[top]=x;
 		}
@@ -67,5 +91,15 @@ public class StackImpleUsingArray {
 			return(top == -1);
 		}
 		
+		public void printStack() {
+			for(int i=0; i<=top-1; i++) {
+				System.out.print(arr[i]);
+				if(i!=top) {
+					System.out.print(",");
+				}
+				
+			}
+			System.out.println();
+		}
 		
 	}
