@@ -7,7 +7,7 @@ package February_POTD;
  * An array is considered special if every pair of its adjacent elements contains two numbers with different parity.
  * 
  */
-public class Day1_Easy_String {
+public class Day1_SpecialArrayI {
 
 	public static boolean specialArray(int s[]) {
 		int n = s.length;
