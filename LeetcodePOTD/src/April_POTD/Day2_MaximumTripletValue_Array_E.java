@@ -1,5 +1,9 @@
 package April_POTD;
 
+
+/**
+ * 2873. Maximum Value of an Ordered Triplet I
+ */
 public class Day2_MaximumTripletValue_Array_E {
 	
 	 public static long maximumTripletValue(int[] nums) {
